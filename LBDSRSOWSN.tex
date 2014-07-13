@@ -393,7 +393,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Learning Based Dynamic Secure Load Balanacing In Service Oriented Wireless Sensor Networks}
+\title{Learning Based Dynamic Secure Load Balancing In Service Oriented Wireless Sensor Networks}
 %
 %
 % author names and IEEE memberships
@@ -627,6 +627,80 @@ Wireless Sensor Networks, secure dynamic routing, load-balancing, machine learni
 % floats. This can be corrected via the \fnbelowfloat command of the
 % stfloats package.
 
+\section{Related Work}
+Uluagac et al., \cite{SOBAS} designed a scheme called SOBAS(Secure SOurce-BAsed Loose Synchronization). It securely synchronizes events in the network without transmission of explicit synchronization messages. Nodes use their local time values as one time dynamic key to encrypt each message. Synchronization of events happens quickly and accurately. Loose synchronization reduces the number of control messages required, energy consumption and opportunity for malicious nodes to eavesdrop. High clock precision has not been achieved.\\ \\
+\indent Ameer et al., \cite{LeDiR} presented a Least-Disruptive topology Repair (LeDiR) algorithm.  It restores the connectivity without extending the length of the shortest path among nodes compared to the prefailure topology. Implementation involves failure detection, smallest block identification and children movement. It minimizes recovers overhead and maintains shortest path lengths at their prefailure value compared with Recovery through Inward Motion (RIM) and Distributed Actor Recovery Algorithm (DARA). LeDiR is resilient to single node failure at a time. This work can be enhanced for simultaneous node failures.\\ \\
+\indent Tao et al., \cite{SKL} introduced mechanisms considering single domain that generate randomized multipath routes. Routes taken by the $shares$ of different packages change over time. Besides randomness, the generated routes are also highly dispersive and energy efficient, making them quite capable of overcoming black holes. The proposed algorithms can be applied to selective packets in WSNs to provide additional security levels against adversaries attempting to acquire these packets. However, adjusting the random propagation and secret sharing parameters, different security levels are achieved at different energy costs.\\ \\
+\indent Guoxing et al., \cite{TARF} explore Trust Aware Routing Framework (TARF) that avoids replay attack. When a replay attack has occurred in the network the adversary routes the information in a wrong direction. The TARF algorithm keeps track of trustworthiness of its neighbors and selects the path based on the trust values. It provides high throughput than link-connectivity protocol  and Collection Tree routing Protocol (CTP) in static and dynamic environment respectively. TARF is scalable to medium scale test beds. The protocol needs to be further evaluated with large-scale WSNs deployed in wild environments.\\ \\
+\indent Shuai et al., \cite{MASP} proposed a data collection scheme, called Maximum Amount Shortest Path (MASP) for Wireless sensor Networks with path constrained mobile sinks. Genetic algorithm and local search is used to optimize the MASP problem. Sink mobility approaches including MASP and Shortest Path Tree method (SPT) perform better than the static sink approach in terms of energy consumption. This work can be extended for different scenarios with various movement trajectories of mobile sinks, subsink selection problem and security.\\ \\
+\indent Xiao et al., \cite{ProHet} introduced a Probabilistic routing protocol for Heterogeneous (ProHet) sensor network protocol. It provides assured delivery rate in a distributed manner using asymmetric links with low overhead. It has two parts: \textit{Preparation part} in which neighbors are identified and a reverse path for an asymmetric link will be find out. \textit{Routing Part} includes selecting nodes, forwarding messages and sending acknowledgement. It provides better delivery ration than AODV. ProHet can be enhanced by incorporating security in it.\\ \\  
+\indent Daojing et al., \cite{SDRP} designed  Secure and Distributed Reprogramming Protocol (SDRP). Secure Reprogramming uses identity based cryptography. It minimizes communication and storage requirements. Compared with Elliptic Curve Cryptography (ECC), it provides good solution in terms of key size. Compared with Deluge (Pollution-resistant reprogramming and data dissemination protocol for WSN) and Seluge (Secure and dos-resistant code dissemination protocol for WSN), it achieves more propagation delay and takes less memory than Seluge and more than Deluge.\\ \\
+\indent Chonggang et al., \cite{PCCP} proposed a node Priority-based Congestion Control Protocol (PCCP) for Wireless Sensor Networks. Congestion is measured based on packet inter-arrival and service time at each sensor node. Priority index and weighted fairness is applied at each sensor node. It achieves high link utilization and flexible fairness than Congestion Control Fairness protocol (CCF) and small buffer size. It avoids packet loss by achieving lesser delay. It makes use of broadcast nature of wireless channel for forwarding congestion notification packets to the child nodes. PCCP can be further enhanced by incorporating security in it.\\ \\
+\indent Bing and Kwan \cite{VOQ} designed a framework for feedback-based scheduling algorithms.  Two sequences of switch configurations are selected and coordinated based on staggered symmetry property and in-order packet delivery property by which efficient feedback mechanism is designed and the packets of same flow experience same delay when passed through different middle-stage Virtual Ouput Queueing (VOQs). It achieves best delay and throughput under various traffic conditions. This work can be extended by incorporating security in it.\\ \\ 
+\indent Amir et al., \cite{LBAODV} proposed Load Balancing Ad hoc On-demand Distance Vector Routing (LBAODV) Algorithm. It transmits data simultaneously on all discovered paths. Load is balanced on all discovered paths. It achieves better packet delivery ratio than Ad hoc On-demand Distance Vector(AODV) and longer end-to-end delay than Ad hoc On-demand Multipath Distance Vector (AOMDV). Since more nodes are involved in forwarding data, consumed energies increases simultaneously. Hence, energy is distributed acroos many nodes by increasing the network life time.\\ \\ 
+\indent Atieh and Marjan \cite{Survey} have done the survey on various congestion control algorithms: Priority-based congestion Control (PCCP), Queue based Congestion Control Protocol with Priority Support (QCCP-PS), Prioritized Heterogeneous Traffic-Oriented Congestion Control Protocol (PHTCCP), Rate-Controlled Reliable Transport protocol (RCRT), Event to Sink Reliable Transport (ESRT) protocol, Sensor Transmission Control Protocol (STCP).\\ \\
+\indent Srikanth et al., \cite{FLARE} proposed Flowlet Aware Routing Engine (FLARE) algorithm. It is a flowlet based splitting algorithm which operates on burst of packets. A flowlet is a burst of packets from a given transport layer flow. Flowlets are characterized by a timeout value, $\delta$. Packet spacing within a flowlet is less than $\delta$. FLARE resides on router that feeds multiple paths and split vector is taken as input which change over time. Tiny overhead incurred by flowlet-based splitting and requires smaller table to track flowlets. This work can be enhanced in terms of security.\\ \\
+\indent Maciej and Sarangapani \cite{DPCC} presents a novel, decentralized, predictive congestion control (DPCC) scheme for wireless sensor networks (WSN). It guarantees weighted fairness during congestion by updating weights associated with each packet. It reduces congestion. This work can be extended for real world applications.\\ \\
+\indent Lucian et al., \cite{IPS} formulated a scheme consisting of multipath routing protocols, Biased Geographical Routing (BGR) and two congestion control algorithms, named In-network Packet Scatter (IPS) and End-to-End Packet Scatter (EPS). IPS alone incurs smaller throughput penalties for short-range flows and is less beneficial to long-range flows. It gives better throughput when combined with EPS compared to Additive Increase Multiplicative Decrease (AIMD) congestion Control Protocol by incurring a communication overhead of 1 byte per data packet, and has a computational complexity similar to greedy geographic routing.\\ \\
+\indent Chieh-Yih Wan et al., \cite{CODA} designed an energy efficient congestion control scheme for sensor networks called CODA (COngestion Detection and Avoidance) that comprises three mechanisms: (i) receiver-based congestion detection, (ii) open-loop hop-by-hop backpressure, and (iii) closed-loop multi-source regulation. Energy tax (Ratio between the total number of packets dropped in the sensor networks and total number of packets received at the sinks over a simulation time.) and fidelity(fidelity is the delivery of the required number of data event packets within a certain time limit.) are the two metrics defined in CODA. It provides minimum fidelity penalty and lower energy tax. This work can be extended by combining with PSFQ(Pump, Slowly, Fetch, Quickly) protocol to achieve better performance.\\ \\
+\indent Hye-Young et al., \cite{Hybrid} introduced Hybrid load balancing scheme for games in wireless sensor networks. Dynamic provisioning algorithm based on greedy growing algorithm is combined with  a user-oriented load balancing scheme, which seeks to allocate the heaviest mobile node and nearest mobile nodes in communication with the regions managed by the powerful agents. The occurrence of reallocation for load-balancing will not increase much even though the number of mobile nodes increase. This work can be extended for real world applications.\\ \\
+\indent Md. Abdur et al., \cite{Buffer} introduced a congestion detection is based on buffer occupancy of a node. Our congestion detection algorithm is buffer based. On reception of a data packet, each intermediate node monitors its current buffer size (BS) and calculates a running average value using Exponential Weighted Moving Average (EWMA) formula.  When it exceeds the predefined threshold (Th) then the congestion is detected and Congestion notification packet  will be sent to source and sets a flag, which will be cleared after a predefined time interval. This work can be extended by performing analysis task on accuracy and energy efficiency of congestion control mechanisms in wireless sensor networks.\\ \\
+\indent Raju Kumaret al., \cite{MCAR} defined MAC-Enhanced (Congestion-Aware Routing) CAR (MCAR), which includes MAC-layer enhancements and a protocol for forming high-priority paths on the fly for each burst of data. CAR requires some overhead for establishing the high-priority routing zone, it is unsuitable for highly mobile data sources. MCAR effectively handles the mobility of high-priority data sources. MCAR’s mechanisms work in a top-down manner. The primary challenge in implementing MCAR involved the strictly modular design of TinyOS.\\ \\
+\indent Xiaoyong et al., \cite{LDTS} have implemented Lightweight Dependable Trust System (LDTS) scheme for WSNs. It is based on the nodes’ identities (roles), which is suitable for facilitating energy-saving in clustering algorithms. It cancels the feedback between cluster members (CMs) or between cluster heads (CHs) because of which system efficiency is improved while reducing the effect of malicious nodes by demanding less memory. \\ \\
+\indent The Dependability-enhanced trust evaluating approach is adopted by LDTS for cooperations between CHs (Cluster Heads). As the number of clusters increases in the network, the LDTS introduces slightly more storage overhead compared with GTMS (Group-based Trust Management Scheme).\\ \\
+\indent Fenye et al., \cite{Trust} introduced a probability model, where multidimensional trust attributes such as subjective trust and objective trust are considered. Subjective trust generated as a result of protocol execution at runtime. Objective trust obtained from actual node status. These trust attributes are applied to trust-based geographic routing and trust-based intrusion detection. This model gives better delivery ratio and less message overhead compared with flooding-based routing and geographical routing. This model can be further enhanced for validating a decentralized trust management for autonomous WSNs without base stations and for more dynamic networks such as mobile WSNs, mobile cyber physical systems, or MANETs (Mobile Ad-hoc Networks).\\ \\
+\indent Prajakta et al., \cite{CARAVAN} designed congestion management algorithm called Congestion Avoidance and Route Allocation using Virtual Agent Negotiation (CARAVAN). It involves complete autonomy of VAs (Virtual Agents) where they individually explore the solution space. Every VA exchanges its autonomously calculated route preference information to arrive at an initial allocation of routes. The virtual nature of these deals requires no physical communication and, thereby, reduces communication requirements. In congested network conditions, the performance of CARAVAN improves with the increase in decision points (junctions) available for negotiation. Compared with shortest path algorithms, it gains more travel time.\\ \\
+\indent Chiara and Roberto \cite{Model} designed a mathematical model, which allows the evaluation of the statistical distribution of the traffic generated by nodes toward the sink. Their results have shown that how the distribution of traffic changes in time axis when different loads are offered. The model allows the evaluation of the optimum packet size (D$_{opt}$), which maximizes the success probability. The D$_{opt}$ decreases while increasing N(Number of nodes). The key assumption of the model is that all the nodes are synchronized.
+
+\begin{table*}
+\begin{center}
+\caption{Our Results and Comparison with Previous Results for Secure Routing in Wireless Sensor Networks.}
+\begin{tabular}{ |   l    |   l    |   l    |   l    |   l    |   l    | }  \hline 
+\label{table:comp}  
+\bfseries{Related Work}&\bfseries{Protocol Name}&\bfseries{Concept}&\bfseries{Performance}&\bfseries{Advantages}&\bfseries{Disadvantages}\\\hline   
+Shancang \emph{et al.,}& (SM-AODV) Secure   & Path vacant ratio & Higher through and    & Load Balancing, & Security can be still\\   
+\cite{SMAODV}, 2013   & Multipath AODV.     & metric is used to & packet delivery ratio,& Congestion control,& enhanced    \\  
+                      &                     & evaluate the path & lower end-to-end delay,&secure delivery scheme& as done in  \\
+		      &         	    & and link-disjoint & lowest data loss ratio &by using threshold    & Our Paper. \\ 
+		      &                     & paths are identified.& compared to AODV.   &secret sharing algorithm.&        \\ \hline   
+Ameer \emph{et al.,}  & (LeDiR) Least       & It involves four &   Minimizes recovery  & Does not impose & Resilient to \\    
+\cite{LeDiR}, 2013    & Disruptive topology & major steps: Failure& overhead compared  & prefailure    & single node  \\     
+                      & Repair algorithm.   & detection, Smallest & with Recovery (RIM)& overhead.    &  failure. \\ 
+                      &                     & block identification,&through Inward Motion&             &    \\ 
+		      &			    & Replacing faulty node&and Distributed Actor&             &    \\
+		      &			    & and children movement.&Recovery algorithm (DARA).&       &    \\\hline  	
+Guoxing \emph{et al.,}& (TARF) Trust-Aware  & Secures the multihop& In the presence of & It guards the WSN & Only Replay attacks   \\   
+		      & Routing Framework   & Routing by evaluating& misbehaviors,throughput&against the mis-directing&are identified.\\   
+                      &                     & the trustworthiness  & is higher than the   & multihop routing, &              \\   
+                      &                     & of the neighboring   & link-connectivity   & based on identity &             \\ 
+                      &                     & nodes.               & protocol.   & theft(Replay attack).    &             \\ \hline 
+Uluagac \emph{et al.,}& SOBAS(Secure SOurce  & It will synchronize& More frequent the packets    &Loose synchroniz-&Low clock \\   
+ \cite{SOBAS}, 2013   & BAsed loose          & each node with    & re-encrypted, the smaller the   &-ation need half of&precision,\\   
+                      & Synchronization)     & base station      & rate of the False Positive      &the energy needed&Unused\\   
+                      &                      &                   & Rate in the network.            &for traditional&Key trail\\  
+                      &                      &                   &                                 &schemes,reduced&attempts\\ 
+                      &                      &                   &                                 &control messages.&\\ \hline
+Our Work              & 		     & At every intermediate& Provides high throughput than   &Avoids congestion,&     \\ 	
+2014                  &                      & node, path security  & other algorithms.               & minimizes delay, &      \\	  
+                      &                      & is verified and minimum&                                 & provides security.&      \\ 
+                      &                      & cost multipaths are &                                 &                 &      \\
+                      &                      & selected.          &                                 &                 &    \\ \hline
+\end{tabular}
+\end{center}  
+ \end{table*} 
+
+\section{Background Work}
+Shancang et al., \cite{SMAODV} proposed SM-AODV (Secure Multipath AODV) protocol which has an evaluation metric, path vacant ratio, to evaluate and find a set of node-disjoint paths from all available paths. SM-SODV includes three phases.\\ \\
+\textit{Phase one: Packet Delivery Scheme}\\ 
+\indent In this phase, data is split into multiple data segments by using threshold secret sharing scheme. Data can be recovered from T received packets from a N split packets, then scheme is called (T,N) threshold secret sharing scheme.\\ \\
+\textit{Phase Two: Multipath Evaluation and Scheduling}\\
+\indent Phase two is important in SM-AODV. IT involves five steps. First, is multipath discovery: all node disjoint paths from source to destination are obtained. Second, Multipath Load Balancing evaluation: Vacant rate of each path is evaluated. Third, using threshold secret sharing scheme, load will be split on multiple paths. Fourth, Based on path vacant ratio, load will be split on multiple paths. Fifth, Congest events will re monitored by congest event module, If congest event occurs, then congest control mechanism will be invoked and load will be load will be forwarded according to congest-level.\\ \\  
+\textit{Phase Three: Congestion Control}\\
+\indent Three parts are included in this phase. They are congestion detection, Congestion control and notification,  and congestion cancellation and load adjusting. Each node sends Hello message to child nodes to check CONGEST event, If CONGEST event is received, CONGEST\_LEVEL will be verified based on the CONGEST\_LEVEL value 0, 1, 2, 3 as no action is taken, path is normal, paths are congested and action to be taken, paths are congested heavily and multipaths must be adjusted respectively. \\ \\
+\indent According to simulation results, SM-AODV has higher packet delivery ratio, throughput, lower end-to-end delay and lowest average data loss ration compared with AODV, AOMDV, CR-AODV. SM-AODV adopts an adaptive congestion control scheme over service oriented architecture, which is effective in node or link failure occurs. This work can be further enhanced in terms of security by including intermediate trustworthiness which is implemented in our paper.
+
+
+
 \section{Mathematical Model}
 
 \subsection{Congestion Detection}
@@ -784,28 +858,28 @@ The conclusion goes here.
 %
 
 
-\appendices
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here.
+%\appendices
+%\section{Proof of the First Zonklar Equation}
+%Appendix one text goes here.
 
 % you can choose not to have a title for an appendix
 % if you want by leaving the argument blank
-\section{}
-Appendix two text goes here.
+%\section{}
+%Appendix two text goes here.
 
 
 % use section* for acknowledgement
-\section*{Acknowledgment}
+%\section*{Acknowledgment}
 
 
-The authors would like to thank...
+%The authors would like to thank...
 
 
 % Can use something like this to put references on a page
 % by themselves when using endfloat and the captionsoff option.
-\ifCLASSOPTIONcaptionsoff
-  \newpage
-\fi
+%\ifCLASSOPTIONcaptionsoff
+ % \newpage
+%\fi
 
 
 
@@ -831,13 +905,142 @@ The authors would like to thank...
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
+%\begin{thebibliography}{1}
 
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+%\bibitem{IEEEhowto:kopka}
+%H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+%\end{thebibliography}
+
+\begin{thebibliography}{00} 
+\bibitem{SOBAS}
+{{A. Uluagac, R. Beyah and J. Copeland,}}
+\newblock {"Secure SOurce-BAsed Loose Synchronization(SOBAS) for Wireless Sensor Networks,"}
+\newblock {\it IEEE Transactions on Parallel and Distributed Systems,} vol.24, no. 4, pp. 803-813, April 2013.
+
+\bibitem{LeDiR}
+{{Ameer A. Abbasi, Mohammed F. Y. and Uthman A.,}}
+\newblock {"Recovering From a Node Failure in Wireless Sensor-Actor Networks with Minimal Topology Changes,"}
+\newblock {\it IEEE Transactions on Vehicular Technology,} vol. 62, no. 1 , pp. 256-271, January 2013.
+
+\bibitem{SKL}
+{{T. Shu, M. Krunz and S. Liu, }}
+\newblock {"Secure Data Collection in Wireless Sensor Networks Using Randomized Dispersive Routes,"} 
+\newblock {\it In IEEE Transactions on Mobile Computing,} vol. 9, no. 7, pp. 941-954, July 2010.
+
+\bibitem{TARF}
+{{Guoxing Zhan, Weisong Shi and Julia Deng}}
+\newblock {"Design and Implementation of TARF:A Trust-Aware Routing Framework for WSNs,"}
+\newblock {\it IEEE Transactions on Dependable and Secure Computing,} vol. 9, no. 2, pp. 184-197, 2012.
+
+\bibitem{MASP}
+{{Shuai Gao, Hongke Zhang and Sajal K. Das,}}
+\newblock {"Efficient Data Collection in Wireless Sensor Networks with Path-Constrained Mobile sinks,"}
+\newblock {\it IEEE Transactions on Mobile Computing,} vol. 10, no. 5, pp. 592-608, April 2011.
+
+\bibitem{ProHet}
+{{Xiao Chen, Zanxun Dai, WenZhong Li, Yuefei Hu, Jie Wu, Hongehi Shi  and Sanglu Lu,}}
+\newblock {"ProHet: A Probabilistic Routing Protocol with Assured Delivery Rate in Wireless Heterogeneous Sensor Networks,"}
+\newblock {\it IEEE Transactions on Wireless Communications,} vol. 12, no. 4 , pp. 1524-1531, April 2013.
+
+\bibitem{SDRP}
+{{Daojing He, Chun Chen, Sammy Chan  and Jiajun Bu,}}
+\newblock{"SDRP: A Secure and Distributed Reprogramming Protocol for Wireless Sensor Networks,"}
+\newblock {\it IEEE Transactions on Industrial Electronics,} vol. 59, no. 11, pp. 4155-4163, November 2012.
+
+\bibitem{PCCP}
+{{Chonggang Wang, Kazem Sohraby, Victor Lawrence, Bo Li  and Yueming Hu,}}
+\newblock {"Priority-based congestion Control in wireless Sensor Networks,"}
+\newblock {\it Proceedings of IEEE International Conference on Sensor Networks, Ubiquitous and Trustworthy Computing (SUTC'06),} 2006.
+
+\bibitem{VOQ}
+{Bing Hu and Kwan L. Yeung,}
+\newblock {"Feedback-Based Scheduling for Load-Balanced Two-Stage Switches,"}
+\newblock {\it IEEE Transactions on Networking,} vol. 18, no. 4 , pp. 1077-1090, August 2010.
+
+\bibitem{LBAODV}
+{Amir Darehshoorzadeh, Nastooh Taheri Javan, Mehdi Dehghan and Mohammed Khalili,}
+\newblock {"LBAODV: A New Load Balancing Multipath Routing Algorithm for Mobile Ad hoc Networks,"}
+\newblock {\it Proceedings of IEEE 2008 sixth National Conference on Telecommunication Technologies and IEEE 2008 Malaysia Conference on Photonics,} August 2008.
+
+\bibitem{Survey}
+{Atieh Rezaei  and Marjan Kuchaki Rafsanjani}
+\newblock {"Congestion Control Protocols in Wireless Sensor Networks: A Survey,"}
+\newblock {\it Journal of American Science,} vol. 8, no. 12, pp. 772-777, 2012.
+
+\bibitem{FLARE}
+{Srikanth Kandula, Dina Katabi, Shantanu Sinha and Arthur Berger,}
+\newblock {"Dynamic Load Balancing Without Packet Reordering,"}
+\newblock {\it ACM SIGCOMM Computer Communication Review, NY, USA,,} vol. 37, no. 2, pp. 51-62, April 2007.
+
+\bibitem{DPCC}
+{Maciej Zawodniok and Sarangapani Jagannathan,}
+\newblock {"Predictive Congestion Control Protocol for Wireless Sensor Networks,"}
+\newblock {\it IEEE Transactions on Wireless Communications,} vol. 6, no. 11, pp. 3955-3963, November 2007.
+
+\bibitem{IPS}
+{Lucian Popa, Costin Raiciu, Ion Stoica and David S. Rosenblum,}
+\newblock {"Reducing Congestion Effects in Wireless Networks by Multipath Routing,"}
+\newblock {\it IEEE 14th International Conference on Network Protocols (ICNP), Santa Barbaa(CA),}  pp. 96-105, Nov. 2006.
+
+\bibitem{CODA}
+{Chieh-Yih Wan, Shane B. Eisenman and andrew T Campbell,}
+\newblock {"CODA: Congestion Detection and Avoidance in Sensor Networks,"}
+\newblock {\it ACM, Proceedings of the First International Conference on Embedded Networked Sensor Systems, (SenSys '03), NY, USA}  pp.266-279, November 2013.
+
+\bibitem{Hybrid}
+{Hye-Young Kim, Hwa-Jin Park and Seojeong Lee,}
+\newblock {"A Hybrid Load Balancing Scheme for Games in Wireless Networks,"}
+\newblock {\it International Journal of Distributed Sensor Networks, Hindawi,} pp. 1-7, 2014.
+
+\bibitem{Buffer}
+{Md. Abdur Razzaque and Choong Seon Hong,}
+\newblock {"Congestion Detection and Control Algorithms for Multipath Data Forwarding in Sensor Networks,"}
+\newblock {\it IEEE  11th International Conference on Advanced Communication Technology (ICACT),} pp. 651-653, Feb. 2009.
+
+\bibitem{MCAR}
+{Raju Kumar, Riccardo Crepaldi, Hosam Rowaihy, Albert F. Harris, Guohong Cao, Michele Zorzi,  and Thomas F. La Porta,}
+\newblock {"Mitigating Performance Degradation in Congested Sensor Networks,"}
+\newblock {\it IEEE Transactions on Mobile Computing,} vol. 7, no. 6, pp. 682-697, June 2008.
+
+\bibitem{LDTS}
+{Xiaoyong Li, Feng Zhou and Junping Du,}
+\newblock {"LDTS: A Lightweight and Dependable Trust System for Clustered Wireless Sensor Networks,"}
+\newblock {\it IEEE Transactions on Information Forensics and Security,} vol. 8, no. 6, pp. 924-935, June 2013.
+
+\bibitem{Trust}
+{Fenye Bao, Ing-Ray Chen, MoonJeong Chang and Jin-Hee Cho,}
+\newblock {"Hierarchical Trust Management for Wireless Sensor Networks and its Applications to Trust-Based Routing and Intrusion Detection,"}
+\newblock {\it IEEE Transactions on Network and Service Management,} vol. 9, no. 2, pp. 169-183, June 2012.
+
+\bibitem{CARAVAN}
+{Prajakta Desai, Seng W. Loke, Aniruddha Desai, and Jugdutt Singh,}
+\newblock {"CARAVAN: Congestion Avoidance and Route Allocation Using Virtual Agent Negotiation,"}
+\newblock {\it IEEE Transactions on Intelligent Transportation Systems,} vol. 14, no. 3, pp. 1197-1207, Sept. 2013.
+
+\bibitem{Model}
+{Chiara Buratti, and Roberto Verdone,}
+\newblock {"Performance Analysis of IEEE 802.15.4 Non Beacon-Enabled Mode,"}
+\newblock {\it IEEE Transactions on Vehicular Technology,} vol. 58, no. 7, pp. 3480-3493, Sept. 2009.
+
+\bibitem{SMAODV}
+{{Shancang Li, Shanshan Zhao, Xinheng Wang, Kewang Zhang and Ling Li,}}
+\newblock {"Adaptive and Secure Load-Balancing Routing Protocol for Service-Oriented Wireless Sensor Networks,"}
+\newblock {\it IEEE Systems Journal,} vol.8, no. 2, pp. 1-10, June 2013.
+
+\bibitem{NS3}
+{{NS-3 http://www.nsnam.org/}}
+
+%\bibitem{}
+%{,  and ,}
+%\newblock {","}
+%\newblock {\it IEEE Transactions on ,} vol., no. , pp. -, April 2013.
+
 
 \end{thebibliography}
+
+
 
 % biography section
 % 
@@ -850,14 +1053,14 @@ H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
 %\begin{biography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
 % or if you just want to reserve a space for a photo:
 
-\begin{IEEEbiography}{Michael Shell}
-Biography text here.
+\begin{IEEEbiography}{Lata B T}
+is an Assistant Professor in the Department of Computer Science and Engineering at the University Visvesvaraya College of Engineering, Bangalore University, Bangalore, India. She obtained her B.E in Computer Science and Engineering from Karnatak University, Dharwad and M.Tech degree in Computer Network Engineering from Visveswaraiah Technological University, Belgaum. She is persuing her Ph.D in the area of Wireless Sensor Networks at Bangalore University. Her research interest is in the area of wireless sensor networks. 
 \end{IEEEbiography}
 
 % if you will not have a photo at all:
-\begin{IEEEbiographynophoto}{John Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
+%\begin{IEEEbiographynophoto}{John Doe}
+%Biography text here.
+%\end{IEEEbiographynophoto}
 
 % insert where needed to balance the two columns on the last page with
 % biographies
